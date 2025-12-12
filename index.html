@@ -1,221 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tabi Collective — Book your next trip</title>
-  <meta name="description" content="Tabi Collective — curated small-group journeys, corporate retreats and bespoke itineraries crafted for mindful travel." />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Tabi Collective — Book your next trip" />
-  <meta property="og:description" content="Curated journeys and bespoke travel experiences. Join a mindful, small-group trip or design your own." />
-  <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuAhQHjBgROsyKxhZQarC8sUQO79mStju45Dnp98aTqzy0tPpDbfND9iNTy7XK9YG-xM8utNkR5vAtbSJwdXgkGkrZyRRpIfAPVpldW2t2lNd1-0EDr_wUINDKgYrjSBM-TfSXuLe4XX1w519hAO9Y7QZJHuKqMih5dy5BoRoBxGOKyFRGD0zBievSH3dfPThgLtoZeNyqTEauz46jbI4bAS23T1K71ZbUm_2AP95pBko0YLz-OaeBuiN7K8vqhUfmbENj-taJsuyCs" />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#FBF9F6" />
+<!doctype html>
+</div>
+</div>
+</section>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Karla:wght@400;700&display=swap" rel="stylesheet" />
+<!-- Testimonials -->
+<section class="py-16">
+<div class="container-max text-center">
+<h2 class="font-serif text-3xl mb-6">What travellers say</h2>
+<div class="grid md:grid-cols-3 gap-6">
+<blockquote class="bg-white p-6 rounded shadow-sm text-left">
+<p class="italic text-sm text-muted">“A beautiful, slow itinerary—thoughtful pacing and authentic hosts. Highly recommended.”</p>
+<div class="mt-4 text-xs font-semibold">— Hannah, Singapore</div>
+</blockquote>
+<blockquote class="bg-white p-6 rounded shadow-sm text-left">
+<p class="italic text-sm text-muted">“We bonded as a team during our retreat. Facilitators were excellent.”</p>
+<div class="mt-4 text-xs font-semibold">— Mark, Jakarta</div>
+</blockquote>
+<blockquote class="bg-white p-6 rounded shadow-sm text-left">
+<p class="italic text-sm text-muted">“Bespoke planning that felt effortless. They handled all the details.”</p>
+<div class="mt-4 text-xs font-semibold">— Lila, Tokyo</div>
+</blockquote>
+</div>
+</div>
+</section>
 
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            primary: "#333333",
-            "background-light": "#FBF9F6",
-            "background-dark": "#121212",
-            "text-light": "#333333",
-            "text-dark": "#EAEAEA",
-            "secondary-light": "#EAE8E4",
-            "secondary-dark": "#2A2A2A"
-          },
-          fontFamily: {
-            display: ["Cormorant Garamond", "serif"],
-            body: ["Karla", "sans-serif"],
-          },
-          borderRadius: {
-            DEFAULT: "0.5rem",
-          },
-        },
-      },
-    };
-  </script>
 
-  <style>
-    body { min-height: 100dvh; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
-  </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark">
-  <div class="min-h-screen flex flex-col px-4 sm:px-6 lg:px-12" x-data="{ open:false }">
-    <!-- Header -->
-    <header class="flex items-center justify-between py-6">
-      <button @click="open = !open" class="lg:hidden z-30">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-      </button>
+</main>
 
-      <header class="flex flex-col items-center text-center space-y-2 flex-grow">
-      <div class="flex items-center space-x-2">
 
-        <!-- NEW LOGO -->
-        <img 
-          src="https://chiajiazhen-ui.github.io/tabicollective/tabicollective-logo.png"
-          alt="Tabi Collective Logo"
-          class="w-8 h-8 object-contain"
-        />
+<!-- Footer (reused on all pages) -->
+<footer class="bg-white border-t border-gray-100 mt-12">
+<div class="container-max py-12 grid md:grid-cols-4 gap-8">
+<div>
+<img src="https://chiajiazhen-ui.github.io/tabicollective/tabicollective-logo.png" alt="logo" class="w-12 h-12 object-contain mb-3" />
+<p class="text-sm text-muted">We design journeys for mindful travellers — small groups, slow pace and soulful experiences.</p>
+</div>
+<div>
+<h4 class="font-semibold mb-3">Explore</h4>
+<ul class="space-y-2 text-sm">
+<li><a href="our-tours.html" class="text-muted hover:text-primary">Our Tours</a></li>
+<li><a href="bespoke-tours.html" class="text-muted hover:text-primary">Bespoke Tours</a></li>
+<li><a href="about.html" class="text-muted hover:text-primary">About</a></li>
+<li><a href="journal.html" class="text-muted hover:text-primary">Journal</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-3">Company</h4>
+<ul class="space-y-2 text-sm">
+<li><a href="#" class="text-muted hover:text-primary">Careers</a></li>
+<li><a href="#" class="text-muted hover:text-primary">Privacy Policy</a></li>
+<li><a href="#" class="text-muted hover:text-primary">Terms</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-3">Contact</h4>
+<p class="text-sm text-muted">Email: <a href="mailto:marketing@tabicollective.com.sg" class="hover:text-primary">marketing@tabicollective.com.sg</a></p>
+<p class="text-sm text-muted">Instagram: <a href="https://www.instagram.com/tabicollective/" class="hover:text-primary">@tabicollective</a></p>
+</div>
+</div>
+<div class="border-t border-gray-100 text-center py-4 text-xs text-muted">© <span id="year"></span> Tabi Collective. All rights reserved.</div>
+</footer>
 
-        <span class="font-display font-bold text-xl tracking-widest">TABI COLLECTIVE</span>
-      </div>
-      <p class="text-xs uppercase tracking-widest">Every step is a story</p>
-    </header>
 
-      <nav class="hidden lg:flex space-x-8">
-        <a href="index.html" class="font-display text-lg">Home</a>
-        <a href="our-tours.html" class="font-display text-lg">Our Tours</a>
-        <a href="bespoke-tours.html" class="font-display text-lg">Bespoke Tours</a>
-        <a href="contact.html" class="font-display text-lg">Contact</a>
-        <a href="about.html" class="font-display text-lg">About</a>
-      </nav>
-      <div class="w-7"></div>
-    </header>
-
-    <!-- Mobile nav -->
-    <div class="lg:hidden mb-6" x-show="open" x-transition>
-      <nav class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow space-y-4">
-        <a href="index.html" class="block font-display">Home</a>
-        <a href="our-tours.html" class="block font-display">Our Tours</a>
-        <a href="bespoke-tours.html" class="block font-display">Bespoke Tours</a>
-        <a href="contact.html" class="block font-display">Contact</a>
-        <a href="about.html" class="block font-display">About</a>
-      </nav>
-    </div>
-
-    <!-- Main -->
-    <main class="flex-grow max-w-5xl mx-auto w-full">
-      <!-- Hero -->
-      <section class="relative mb-12">
-        <div class="absolute left-0 top-12 w-24 h-48 bg-secondary-light dark:bg-secondary-dark rounded-r-xl hidden sm:block"></div>
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhQHjBgROsyKxhZQarC8sUQO79mStju45Dnp98aTqzy0tPpDbfND9iNTy7XK9YG-xM8utNkR5vAtbSJwdXgkGkrZyRRpIfAPVpldW2t2lNd1-0EDr_wUINDKgYrjSBM-TfSXuLe4XX1w519hAO9Y7QZJHuKqMih5dy5BoRoBxGOKyFRGD0zBievSH3dfPThgLtoZeNyqTEauz46jbI4bAS23T1K71ZbUm_2AP95pBko0YLz-OaeBuiN7K8vqhUfmbENj-taJsuyCs"
-          alt="Three happy women on the bow of a boat in a beautiful lake surrounded by mountains"
-          class="relative z-10 w-full h-auto rounded-xl shadow-lg object-cover" />
-      </section>
-
-      <!-- Intro -->
-      <section class="text-center mb-12">
-        <h1 class="font-display text-4xl md:text-6xl mb-6">Book your next trip with Tabi.</h1>
-
-        <div class="text-left text-base md:text-lg space-y-4 mb-10 max-w-xl mx-auto leading-relaxed">
-          <p>"We craft journeys that walk in rhythm with you."</p>
-
-          <ul class="list-disc pl-6 space-y-2">
-            <li>Curated group journeys — culture, cuisine, nature.</li>
-            <li>Corporate retreats — designed around “flow, mindfulness, and bonding.”</li>
-            <li>Custom itineraries — slow travel, off-the-beaten-path, but stress-free.</li>
-          </ul>
-
-          <p>"<span class='font-display text-xl'>旅</span> means journey. We make it joyful."</p>
-        </div>
-
-        <a href="our-tours.html" class="inline-block border border-text-light dark:border-text-dark rounded-full px-10 py-3 text-base font-bold tracking-wider hover:bg-secondary-light dark:hover:bg-secondary-dark transition-colors duration-300">
-          Upcoming Trips
-        </a>
-      </section>
-
-      <!-- Destinations -->
-      <section class="mb-12">
-        <h2 class="font-display text-2xl md:text-3xl mb-6 text-center">Destinations</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <article class="bg-white dark:bg-[#171717] p-5 rounded-xl shadow-sm">
-            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="Mountain lake" class="w-full h-44 object-cover rounded-md mb-4" />
-            <h3 class="font-display text-xl mb-1">Alpine Lakes</h3>
-            <p class="text-sm leading-relaxed">Slow, scenic journeys between mountain villages and hidden lakes.</p>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="bg-white dark:bg-[#171717] p-5 rounded-xl shadow-sm">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="Coastal town" class="w-full h-44 object-cover rounded-md mb-4" />
-            <h3 class="font-display text-xl mb-1">Coastal Trails</h3>
-            <p class="text-sm leading-relaxed">Coastal walks, seafood feasts and seaside towns with calm rhythms.</p>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="bg-white dark:bg-[#171717] p-5 rounded-xl shadow-sm">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="Cultural market" class="w-full h-44 object-cover rounded-md mb-4" />
-            <h3 class="font-display text-xl mb-1">Cultural Journeys</h3>
-            <p class="text-sm leading-relaxed">Markets, home-cooked meals and curated cultural exchanges.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- Testimonials -->
-      <section class="mb-16">
-        <h2 class="font-display text-2xl md:text-3xl mb-6 text-center">What travellers say</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <blockquote class="bg-white dark:bg-[#171717] p-6 rounded-xl shadow-sm">
-            <p class="mb-4">“A beautiful, slow itinerary—thoughtful pacing and authentic hosts. Highly recommended.”</p>
-            <footer class="text-sm font-bold">— Hannah, Singapore</footer>
-          </blockquote>
-
-          <blockquote class="bg-white dark:bg-[#171717] p-6 rounded-xl shadow-sm">
-            <p class="mb-4">“We bonded as a team during our retreat. The facilitators were excellent and calm.”</p>
-            <footer class="text-sm font-bold">— Mark, Jakarta</footer>
-          </blockquote>
-
-          <blockquote class="bg-white dark:bg-[#171717] p-6 rounded-xl shadow-sm">
-            <p class="mb-4">“Bespoke planning that felt effortless. They handled all the details.”</p>
-            <footer class="text-sm font-bold">— Lila, Tokyo</footer>
-          </blockquote>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-secondary-light dark:border-secondary-dark py-10 mt-6">
-      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h4 class="font-display text-lg mb-2">TABI</h4>
-          <p class="text-sm">We design journeys for mindful travellers — small groups, slow pace, soulful experiences.</p>
-        </div>
-
-        <div>
-          <h5 class="font-bold mb-2">Explore</h5>
-          <ul class="text-sm space-y-1">
-            <li><a href="our-tours.html">Our Tours</a></li>
-            <li><a href="bespoke-tours.html">Bespoke Tours</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h5 class="font-bold mb-2">Stay in touch</h5>
-          <form action="#" class="flex flex-col sm:flex-row gap-3">
-            <input type="email" placeholder="Email address" class="px-4 py-2 rounded-lg border border-secondary-light dark:border-secondary-dark focus:outline-none" />
-            <button type="submit" class="px-4 py-2 rounded-lg border border-text-light dark:border-text-dark font-bold">Subscribe</button>
-          </form>
-
-          <div class="mt-4 flex space-x-3">
-            <a href="#" aria-label="Instagram" class="text-sm">Instagram</a>
-            <a href="#" aria-label="Facebook" class="text-sm">Facebook</a>
-            <a href="#" aria-label="Email" class="text-sm">Email</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-8 text-center text-xs">
-        © <span id="year"></span> Tabi Collective • All rights reserved
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    // Set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-  <!-- Alpine -->
-  <script defer src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+```
