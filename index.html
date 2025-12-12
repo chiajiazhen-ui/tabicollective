@@ -1,60 +1,245 @@
 <!doctype html>
-<h2 class="font-serif text-3xl mb-6">What travellers say</h2>
-<div class="grid md:grid-cols-3 gap-6">
-<blockquote class="bg-white p-6 rounded shadow-sm text-left">
-<p class="italic text-sm text-muted">“A beautiful, slow itinerary—thoughtful pacing and authentic hosts. Highly recommended.”</p>
-<div class="mt-4 text-xs font-semibold">— Hannah, Singapore</div>
-</blockquote>
-<blockquote class="bg-white p-6 rounded shadow-sm text-left">
-<p class="italic text-sm text-muted">“We bonded as a team during our retreat. Facilitators were excellent.”</p>
-<div class="mt-4 text-xs font-semibold">— Mark, Jakarta</div>
-</blockquote>
-<blockquote class="bg-white p-6 rounded shadow-sm text-left">
-<p class="italic text-sm text-muted">“Bespoke planning that felt effortless. They handled all the details.”</p>
-<div class="mt-4 text-xs font-semibold">— Lila, Tokyo</div>
-</blockquote>
-</div>
-</div>
-</section>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tabi Collective — Corporate Retreats & Bespoke Travel</title>
+  <meta name="description" content="Tabi Collective crafts mindful corporate retreats, curated group journeys and bespoke itineraries focused on flow, culture and wellbeing." />
+  <link rel="canonical" href="https://chiajiazhen-ui.github.io/tabicollective/" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tabi Collective — Corporate Retreats & Bespoke Travel" />
+  <meta property="og:description" content="Tabi Collective crafts mindful corporate retreats, curated group journeys and bespoke itineraries focused on flow, culture and wellbeing." />
+  <meta property="og:image" content="https://chiajiazhen-ui.github.io/tabicollective/tabicollective-logo.png" />
+  <meta property="og:type" content="website" />
 
-</main>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tabi Collective — Corporate Retreats & Bespoke Travel" />
+  <meta name="twitter:description" content="Mindful corporate retreats and bespoke travel crafted for teams and professionals." />
 
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 
-<!-- Footer (reused on all pages) -->
-<footer class="bg-white border-t border-gray-100 mt-12">
-<div class="container-max py-12 grid md:grid-cols-4 gap-8">
-<div>
-<img src="https://chiajiazhen-ui.github.io/tabicollective/tabicollective-logo.png" alt="logo" class="w-12 h-12 object-contain mb-3" />
-<p class="text-sm text-muted">We design journeys for mindful travellers — small groups, slow pace and soulful experiences.</p>
-</div>
-<div>
-<h4 class="font-semibold mb-3">Explore</h4>
-<ul class="space-y-2 text-sm">
-<li><a href="our-tours.html" class="text-muted hover:text-primary">Our Tours</a></li>
-<li><a href="bespoke-tours.html" class="text-muted hover:text-primary">Bespoke Tours</a></li>
-<li><a href="about.html" class="text-muted hover:text-primary">About</a></li>
-<li><a href="journal.html" class="text-muted hover:text-primary">Journal</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-semibold mb-3">Company</h4>
-<ul class="space-y-2 text-sm">
-<li><a href="#" class="text-muted hover:text-primary">Careers</a></li>
-<li><a href="#" class="text-muted hover:text-primary">Privacy Policy</a></li>
-<li><a href="#" class="text-muted hover:text-primary">Terms</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-semibold mb-3">Contact</h4>
-<p class="text-sm text-muted">Email: <a href="mailto:marketing@tabicollective.com.sg" class="hover:text-primary">marketing@tabicollective.com.sg</a></p>
-<p class="text-sm text-muted">Instagram: <a href="https://www.instagram.com/tabicollective/" class="hover:text-primary">@tabicollective</a></p>
-</div>
-</div>
-<div class="border-t border-gray-100 text-center py-4 text-xs text-muted">© <span id="year"></span> Tabi Collective. All rights reserved.</div>
-</footer>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2C3E50',
+            'background-light':'#F9FAFB',
+            'background-dark':'#0F172A',
+            accent: '#BCAAA4'
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond','serif'],
+            sans: ['Inter','sans-serif']
+          }
+        }
+      }
+    }
+  </script>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <style>
+    /* small helpers */
+    .container-max { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    .text-muted { color: rgba(31,41,55,0.7); }
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Tabi Collective",
+    "url": "https://chiajiazhen-ui.github.io/tabicollective/",
+    "logo": "https://chiajiazhen-ui.github.io/tabicollective/tabicollective-logo.png",
+    "description": "Mindful corporate retreats, curated group journeys and bespoke itineraries.",
+    "sameAs": ["https://www.instagram.com/tabicollective/"]
+  }
+  </script>
+</head>
+<body class="bg-background-light text-gray-800 antialiased">
+
+  <!-- Header -->
+  <header class="fixed w-full z-30 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+    <div class="container-max flex items-center justify-between h-20">
+      <div class="flex items-center gap-4">
+        <img src="https://chiajiazhen-ui.github.io/tabicollective/tabicollective-logo.png" alt="Tabi Collective logo" class="w-10 h-10 object-contain" />
+        <div>
+          <div class="font-serif text-xl font-semibold">Tabi Collective</div>
+          <div class="text-xs tracking-widest text-muted mt-0.5">Every Step is a Story</div>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="index.html" class="hover:text-primary">Home</a>
+        <a href="our-tours.html" class="hover:text-primary">Our Tours</a>
+        <a href="bespoke-tours.html" class="hover:text-primary">Bespoke Tours</a>
+        <a href="about.html" class="hover:text-primary">About</a>
+        <a href="journal.html" class="hover:text-primary">Journal</a>
+        <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded">Contact Us</a>
+      </nav>
+
+      <!-- Mobile menu placeholder (simple) -->
+      <div class="md:hidden">
+        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Open menu" class="p-2">
+          <!-- simple hamburger -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="container-max py-4 flex flex-col gap-3">
+        <a href="index.html">Home</a>
+        <a href="our-tours.html">Our Tours</a>
+        <a href="bespoke-tours.html">Bespoke Tours</a>
+        <a href="about.html">About</a>
+        <a href="journal.html">Journal</a>
+        <a href="contact.html" class="font-semibold">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="pt-24">
+    <section class="relative">
+      <div class="w-full h-[70vh] md:h-[75vh] relative overflow-hidden">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbw5p6rxE7hHtsGYAomymaxRzRM5W8a_Tuc135cQ-lu1is3l0J2N6qc_tTOk4WX8kIJZlyy5av8BHXyT5Nr3_yxq8FF-FGyF5dmLVZNS5mVhco9PDjP3Yn5cwUblpKlgKBdu1CP4KDKwVn8lke68fFdBTihJd_cnA8hq4W9EJ7kgIGLTEMhP988t5T5kjgUHkfFRI_OUsXinWXg2TWlIOzOKXkqkShJcwQOAl5DoYA2GknYe0Dkv0PEmvBq2CfUjZ50_H75HEBwJf5" alt="hero" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-black/20"></div>
+        <div class="absolute left-0 right-0 bottom-8 flex justify-center">
+          <div class="bg-white/95 dark:bg-gray-800/90 shadow-lg rounded-lg p-8 max-w-3xl text-center border border-gray-100">
+            <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl text-primary mb-4">Book your next <em class="font-light">mindful</em> journey</h1>
+            <p class="text-muted max-w-2xl mx-auto mb-6">We craft corporate retreats and bespoke itineraries that walk in rhythm with you — culture, cuisine and nature designed for flow, mindfulness and bonding.</p>
+            <div class="flex gap-4 justify-center">
+              <a href="our-tours.html" class="bg-primary text-white px-6 py-2 rounded uppercase text-sm">Upcoming Trips</a>
+              <a href="bespoke-tours.html" class="border border-gray-200 px-6 py-2 rounded uppercase text-sm">Bespoke Tours</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-20">
+      <div class="container-max grid md:grid-cols-3 gap-12">
+        <div class="text-center md:text-left">
+          <div class="w-12 h-12 rounded-full bg-primary/10 inline-flex items-center justify-center text-primary mb-4">👥</div>
+          <h3 class="font-serif text-2xl mb-2">Curated Group Journeys</h3>
+          <p class="text-muted text-sm">Immersive experiences focused on culture, cuisine and nature — ideal for teams.</p>
+        </div>
+        <div class="text-center md:text-left">
+          <div class="w-12 h-12 rounded-full bg-primary/10 inline-flex items-center justify-center text-primary mb-4">🧘</div>
+          <h3 class="font-serif text-2xl mb-2">Corporate Retreats</h3>
+          <p class="text-muted text-sm">Designed around flow, mindfulness and bonding so leaders can focus on strategy and wellbeing.</p>
+        </div>
+        <div class="text-center md:text-left">
+          <div class="w-12 h-12 rounded-full bg-primary/10 inline-flex items-center justify-center text-primary mb-4">🗺️</div>
+          <h3 class="font-serif text-2xl mb-2">Custom Itineraries</h3>
+          <p class="text-muted text-sm">Slow travel, off-the-beaten-path, and logistics handled end-to-end.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured destinations -->
+    <section class="py-12 bg-gray-50">
+      <div class="container-max">
+        <div class="text-center mb-8">
+          <h2 class="font-serif text-3xl mb-2">Featured Destinations</h2>
+          <p class="text-muted">A selection of journeys we commonly run and adapt for groups.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="rounded-lg overflow-hidden bg-white shadow-sm">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="alpine" class="w-full h-56 object-cover" />
+            <div class="p-4">
+              <h3 class="font-serif text-xl mb-2">Alpine Lakes</h3>
+              <p class="text-sm text-muted mb-3">Slow, scenic journeys between mountain villages and hidden lakes.</p>
+              <a href="#" class="text-sm font-semibold text-primary">View itinerary →</a>
+            </div>
+          </article>
+
+          <article class="rounded-lg overflow-hidden bg-white shadow-sm">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="coast" class="w-full h-56 object-cover" />
+            <div class="p-4">
+              <h3 class="font-serif text-xl mb-2">Coastal Trails</h3>
+              <p class="text-sm text-muted mb-3">Coastal walks, seafood and seaside towns with calm rhythms.</p>
+              <a href="#" class="text-sm font-semibold text-primary">View itinerary →</a>
+            </div>
+          </article>
+
+          <article class="rounded-lg overflow-hidden bg-white shadow-sm">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="culture" class="w-full h-56 object-cover" />
+            <div class="p-4">
+              <h3 class="font-serif text-xl mb-2">Cultural Journeys</h3>
+              <p class="text-sm text-muted mb-3">Markets, home-cooked meals and curated cultural exchanges.</p>
+              <a href="#" class="text-sm font-semibold text-primary">View itinerary →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16">
+      <div class="container-max text-center">
+        <h2 class="font-serif text-3xl mb-6">What travellers say</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <blockquote class="bg-white p-6 rounded shadow-sm text-left">
+            <p class="italic text-sm text-muted">“A beautiful, slow itinerary—thoughtful pacing and authentic hosts. Highly recommended.”</p>
+            <div class="mt-4 text-xs font-semibold">— Hannah, Singapore</div>
+          </blockquote>
+          <blockquote class="bg-white p-6 rounded shadow-sm text-left">
+            <p class="italic text-sm text-muted">“We bonded as a team during our retreat. Facilitators were excellent.”</p>
+            <div class="mt-4 text-xs font-semibold">— Mark, Jakarta</div>
+          </blockquote>
+          <blockquote class="bg-white p-6 rounded shadow-sm text-left">
+            <p class="italic text-sm text-muted">“Bespoke planning that felt effortless. They handled all the details.”</p>
+            <div class="mt-4 text-xs font-semibold">— Lila, Tokyo</div>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (reused on all pages) -->
+  <footer class="bg-white border-t border-gray-100 mt-12">
+    <div class="container-max py-12 grid md:grid-cols-4 gap-8">
+      <div>
+        <img src="https://chiajiazhen-ui.github.io/tabicollective/tabicollective-logo.png" alt="logo" class="w-12 h-12 object-contain mb-3" />
+        <p class="text-sm text-muted">We design journeys for mindful travellers — small groups, slow pace and soulful experiences.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Explore</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="our-tours.html" class="text-muted hover:text-primary">Our Tours</a></li>
+          <li><a href="bespoke-tours.html" class="text-muted hover:text-primary">Bespoke Tours</a></li>
+          <li><a href="about.html" class="text-muted hover:text-primary">About</a></li>
+          <li><a href="journal.html" class="text-muted hover:text-primary">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="text-muted hover:text-primary">Careers</a></li>
+          <li><a href="#" class="text-muted hover:text-primary">Privacy Policy</a></li>
+          <li><a href="#" class="text-muted hover:text-primary">Terms</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Contact</h4>
+        <p class="text-sm text-muted">Email: <a href="mailto:marketing@tabicollective.com.sg" class="hover:text-primary">marketing@tabicollective.com.sg</a></p>
+        <p class="text-sm text-muted">Instagram: <a href="https://www.instagram.com/tabicollective/" class="hover:text-primary">@tabicollective</a></p>
+      </div>
+    </div>
+    <div class="border-t border-gray-100 text-center py-4 text-xs text-muted">© <span id="year"></span> Tabi Collective. All rights reserved.</div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
