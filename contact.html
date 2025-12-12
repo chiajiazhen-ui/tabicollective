@@ -1,82 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Tabi Collective</title>
-  <meta name="description" content="Get in touch with Tabi Collective for enquiries, group bookings and bespoke itineraries." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1515165562835-c6f3c9b5b2e6?q=80&w=1200&auto=format&fit=crop&crop=entropy" />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Karla:wght@400;700&display=swap" rel="stylesheet" />
-  <script>tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{display:['Cormorant Garamond','serif'],body:['Karla','sans-serif']}}}};</script>
-  <style>body{min-height:100dvh}</style>
+<!doctype html>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark" x-data="{ open:false }">
-  <div class="min-h-screen px-4 sm:px-6 lg:px-12">
-    <header class="flex items-center justify-between py-6">
-      <button @click="open=!open" class="lg:hidden">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-      </button>
+<body class="bg-background-light text-gray-800">
+<header class="py-6 border-b border-gray-100">
+<div class="container-max flex items-center gap-4">
+<img src="https://chiajiazhen-ui.github.io/tabicollective/tabicollective-logo.png" alt="logo" class="w-10 h-10" />
+<div>
+<div class="font-serif text-xl font-semibold">Tabi Collective</div>
+<div class="text-xs text-muted">Every Step is a Story</div>
+</div>
+</div>
+</header>
 
-      <div class="flex flex-col items-center text-center flex-1">
-        <div class="flex items-center space-x-2">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 4.42 6.22 9.85 6.42 10.12.1.13.26.21.43.21.01 0 .01 0 0 0 .17 0 .33-.08.43-.21.2-.27 6.42-5.7 6.42-10.12C19 5.13 15.87 2 12 2zm0 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>
-          <span class="font-display font-bold text-xl tracking-widest">TABI</span>
-        </div>
-        <p class="text-xs mt-1 uppercase tracking-widest">Every step is a story</p>
-      </div>
 
-      <nav class="hidden lg:flex space-x-8">
-        <a href="index.html" class="font-display">Home</a>
-        <a href="our-tours.html" class="font-display">Our Tours</a>
-        <a href="bespoke-tours.html" class="font-display">Bespoke Tours</a>
-        <a href="contact.html" class="font-display">Contact</a>
-        <a href="about.html" class="font-display">About</a>
-      </nav>
-      <div class="w-7"></div>
-    </header>
+<main class="container-max py-12">
+<h1 class="font-serif text-3xl mb-6">Contact us</h1>
 
-    <div class="lg:hidden mb-6" x-show="open" x-transition>
-      <nav class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow space-y-4">
-        <a href="index.html" class="block">Home</a>
-        <a href="our-tours.html" class="block">Our Tours</a>
-        <a href="bespoke-tours.html" class="block">Bespoke Tours</a>
-        <a href="contact.html" class="block">Contact</a>
-        <a href="about.html" class="block">About</a>
-      </nav>
-    </div>
 
-    <main class="max-w-4xl mx-auto w-full">
-      <h1 class="font-display text-3xl mb-6">Contact us</h1>
+<div class="grid md:grid-cols-2 gap-8">
+<form id="contact-form" class="bg-white p-6 rounded shadow-sm">
+<div class="grid gap-3">
+<input required name="name" placeholder="Full name" class="border p-3 rounded" />
+<input required name="email" type="email" placeholder="Email" class="border p-3 rounded" />
+<input name="phone" placeholder="Phone" class="border p-3 rounded" />
+<input name="subject" placeholder="Subject" class="border p-3 rounded" />
+<textarea required name="message" rows="6" placeholder="Message" class="border p-3 rounded"></textarea>
+</div>
+<div class="mt-4 text-right">
+<button type="submit" class="bg-primary text-white px-4 py-2 rounded">Send message</button>
+</div>
+</form>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <form action="#" class="bg-white dark:bg-[#171717] p-6 rounded-xl shadow-sm space-y-4">
-          <input type="text" placeholder="Full name" class="w-full px-4 py-2 border rounded-lg" />
-          <input type="email" placeholder="Email" class="w-full px-4 py-2 border rounded-lg" />
-          <input type="text" placeholder="Subject" class="w-full px-4 py-2 border rounded-lg" />
-          <textarea placeholder="Message" rows="6" class="w-full px-4 py-2 border rounded-lg"></textarea>
-          <div class="flex justify-end">
-            <button type="submit" class="px-6 py-2 rounded-lg border border-text-light dark:border-text-dark font-bold">Send message</button>
-          </div>
-        </form>
 
-        <div class="p-6">
-          <h2 class="font-bold mb-2">Office</h2>
-          <p class="text-sm mb-4">Email: hello@tabicollective.example<br/>Phone: +65 6123 4567</p>
+<div class="p-6">
+<h3 class="font-semibold mb-2">Office</h3>
+<p class="text-sm text-muted">60 Paya Lebar Road<br/>#06-28 Paya Lebar Square<br/>Singapore 409051</p>
+<p class="text-sm text-muted mt-4">Email: <a href="mailto:marketing@tabicollective.com.sg" class="text-primary">marketing@tabicollective.com.sg</a></p>
+<p class="text-sm text-muted">Phone: +65 9363 6777</p>
+</div>
+</div>
 
-          <h3 class="font-bold mb-2">FAQ</h3>
-          <ul class="list-disc pl-6 text-sm space-y-2">
-            <li>Group sizes are typically 6–12 participants.</li>
-            <li>We craft inclusive itineraries suitable for varied fitness levels.</li>
-          </ul>
-        </div>
-      </div>
-    </main>
 
-    <footer class="border-t border-secondary-light dark:border-secondary-dark py-8 mt-10 text-sm text-center">© <span id="year5"></span> Tabi Collective</footer>
-  </div>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e){
+e.preventDefault();
+var f = e.target;
+var data = {
+name: f.name.value,
+email: f.email.value,
+phone: f.phone.value,
+subject: f.subject.value,
+message: f.message.value
+};
+var body = 'New contact enquiry from ' + data.name + '
 
-  <script>document.getElementById('year5').textContent = new Date().getFullYear();</script>
-  <script defer src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
+';
+body += 'Email: ' + data.email + '
+';
+body += 'Phone: ' + data.phone + '
+';
+body += 'Subject: ' + data.subject + '
+
+
+';
+body += data.message;
+var mailto = 'mailto:marketing@tabicollective.com.sg?subject=' + encodeURIComponent('Contact enquiry from ' + data.name) + '&body=' + encodeURIComponent(body);
+window.location.href = mailto;
+});
+</script>
+
+
+</main>
+
+
+<footer class="bg-white border-t border-gray-100 mt-12">
+<div class="container-max py-8 text-xs text-muted text-center">© <span id="year-c"></span> Tabi Collective</div>
+</footer>
+<script>document.getElementById('year-c').textContent = new Date().getFullYear();</script>
 </body>
 </html>
