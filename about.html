@@ -1,52 +1,42 @@
 <!doctype html>
-<input name="phone" placeholder="Phone" class="border p-3 rounded" />
-<input name="dates" placeholder="Preferred travel dates" class="border p-3 rounded" />
+</header>
+
+
+<main class="container-max py-12">
+<h1 class="font-serif text-3xl mb-6">About Tabi</h1>
+<p class="text-muted max-w-2xl mb-6">Tabi Collective began from a curiosity for slow travel and meaningful connections. We design trips that spend more time in fewer places — so you can sink into local rhythms and return refreshed.</p>
+
+
+<section class="grid md:grid-cols-2 gap-8 mt-8">
+<div>
+<h2 class="font-serif text-2xl mb-3">Our values</h2>
+<ul class="list-disc pl-6 text-muted">
+<li>Small groups, low-impact travel.</li>
+<li>Community-first itineraries and local partnerships.</li>
+<li>Thoughtful pacing and wellbeing-led experiences.</li>
+</ul>
 </div>
-<div class="mt-4">
-<textarea name="message" rows="6" placeholder="Tell us about the trip" class="border p-3 rounded w-full"></textarea>
+<div>
+<h2 class="font-serif text-2xl mb-3">Meet the team</h2>
+<div class="space-y-4">
+<div class="bg-white p-4 rounded shadow-sm">
+<strong>Vera Heng — Co-founder</strong>
+<p class="text-sm text-muted">Background blurb here.</p>
 </div>
-<div class="mt-4 text-right">
-<button type="submit" class="bg-primary text-white px-4 py-2 rounded">Send enquiry</button>
+<div class="bg-white p-4 rounded shadow-sm">
+<strong>Aida — Founder</strong>
+<p class="text-sm text-muted">Background blurb here.</p>
 </div>
-</form>
-
-
-<script>
-// On submit, open mail client with prefilled content (also degrades to mailto action)
-document.getElementById('bespoke-form').addEventListener('submit', function(e){
-e.preventDefault();
-var f = e.target;
-var data = {
-name: f.name.value,
-email: f.email.value,
-phone: f.phone.value,
-dates: f.dates.value,
-message: f.message.value
-};
-var body = 'New bespoke enquiry from ' + data.name + '
-
-
-';
-body += 'Email: ' + data.email + '
-';
-body += 'Phone: ' + data.phone + '
-';
-body += 'Dates: ' + data.dates + '
-
-
-';
-body += data.message;
-var mailto = 'mailto:marketing@tabicollective.com.sg?subject=' + encodeURIComponent('Bespoke enquiry from ' + data.name) + '&body=' + encodeURIComponent(body);
-window.location.href = mailto;
-});
-</script>
+</div>
+</div>
+</section>
 </main>
 
 
+<!-- Footer (same as index) -->
 <footer class="bg-white border-t border-gray-100 mt-12">
-<div class="container-max py-8 text-xs text-muted text-center">© <span id="year-b"></span> Tabi Collective</div>
+<div class="container-max py-8 text-xs text-muted text-center">© <span id="year-a"></span> Tabi Collective</div>
 </footer>
-<script>document.getElementById('year-b').textContent = new Date().getFullYear();</script>
+<script>document.getElementById('year-a').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-```
