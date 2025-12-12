@@ -1,42 +1,56 @@
-<!doctype html>
-</header>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Tabi Collective</title>
+  <meta name="description" content="About Tabi Collective — our story, values and team." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-background-light text-gray-800">
+  <header class="py-6 border-b border-gray-100">
+    <div class="container-max flex items-center gap-4">
+      <img src="https://chiajiazhen-ui.github.io/tabicollective/tabicollective-logo.png" alt="logo" class="w-10 h-10" />
+      <div>
+        <div class="font-serif text-xl font-semibold">Tabi Collective</div>
+        <div class="text-xs text-muted">Every Step is a Story</div>
+      </div>
+    </div>
+  </header>
 
+  <main class="container-max py-12">
+    <h1 class="font-serif text-3xl mb-6">About Tabi</h1>
+    <p class="text-muted max-w-2xl mb-6">Tabi Collective began from a curiosity for slow travel and meaningful connections. We design trips that spend more time in fewer places — so you can sink into local rhythms and return refreshed.</p>
 
-<main class="container-max py-12">
-<h1 class="font-serif text-3xl mb-6">About Tabi</h1>
-<p class="text-muted max-w-2xl mb-6">Tabi Collective began from a curiosity for slow travel and meaningful connections. We design trips that spend more time in fewer places — so you can sink into local rhythms and return refreshed.</p>
+    <section class="grid md:grid-cols-2 gap-8 mt-8">
+      <div>
+        <h2 class="font-serif text-2xl mb-3">Our values</h2>
+        <ul class="list-disc pl-6 text-muted">
+          <li>Small groups, low-impact travel.</li>
+          <li>Community-first itineraries and local partnerships.</li>
+          <li>Thoughtful pacing and wellbeing-led experiences.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="font-serif text-2xl mb-3">Meet the team</h2>
+        <div class="space-y-4">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <strong>Vera Heng — Co-founder</strong>
+            <p class="text-sm text-muted">Background blurb here.</p>
+          </div>
+          <div class="bg-white p-4 rounded shadow-sm">
+            <strong>Aida — Founder</strong>
+            <p class="text-sm text-muted">Background blurb here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-<section class="grid md:grid-cols-2 gap-8 mt-8">
-<div>
-<h2 class="font-serif text-2xl mb-3">Our values</h2>
-<ul class="list-disc pl-6 text-muted">
-<li>Small groups, low-impact travel.</li>
-<li>Community-first itineraries and local partnerships.</li>
-<li>Thoughtful pacing and wellbeing-led experiences.</li>
-</ul>
-</div>
-<div>
-<h2 class="font-serif text-2xl mb-3">Meet the team</h2>
-<div class="space-y-4">
-<div class="bg-white p-4 rounded shadow-sm">
-<strong>Vera Heng — Co-founder</strong>
-<p class="text-sm text-muted">Background blurb here.</p>
-</div>
-<div class="bg-white p-4 rounded shadow-sm">
-<strong>Aida — Founder</strong>
-<p class="text-sm text-muted">Background blurb here.</p>
-</div>
-</div>
-</div>
-</section>
-</main>
-
-
-<!-- Footer (same as index) -->
-<footer class="bg-white border-t border-gray-100 mt-12">
-<div class="container-max py-8 text-xs text-muted text-center">© <span id="year-a"></span> Tabi Collective</div>
-</footer>
-<script>document.getElementById('year-a').textContent = new Date().getFullYear();</script>
+  <!-- Footer (same as index) -->
+  <footer class="bg-white border-t border-gray-100 mt-12">
+    <div class="container-max py-8 text-xs text-muted text-center">© <span id="year-a"></span> Tabi Collective</div>
+  </footer>
+  <script>document.getElementById('year-a').textContent = new Date().getFullYear();</script>
 </body>
 </html>
