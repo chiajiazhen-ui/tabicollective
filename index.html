@@ -7,11 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
+        html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
         .bg-cream { background-color: #F9F7F2; }
         .text-dark-brown { color: #2D241E; }
         .bg-dark-brown { background-color: #2D241E; }
+        
+        /* Carousel Styles */
+        .testimonial-slide { display: none; }
+        .testimonial-slide.active { display: block; animation: fadeIn 0.8s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body class="text-dark-brown antialiased">
@@ -19,13 +25,16 @@
     <header class="relative h-screen flex items-center justify-center text-white overflow-hidden">
         <img src="https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&q=80&w=2000" alt="Resort" class="absolute inset-0 w-full h-full object-cover brightness-75">
         
-        <nav class="absolute top-0 w-full p-8 flex justify-between items-center z-10">
-            <div class="text-xl font-bold tracking-widest uppercase">Tabi Collective</div>
+        <nav class="absolute top-0 w-full p-8 flex justify-between items-center z-20 bg-gradient-to-b from-black/40 to-transparent">
+            <div class="flex items-center space-x-3">
+                <img src="https://chiajiazhen-ui.github.io/tabicollective/tabicollective-logo.png" alt="Logo" class="h-10 w-auto">
+                <div class="text-xl font-bold tracking-widest uppercase">Tabi Collective</div>
+            </div>
             <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
-                <a href="#" class="hover:opacity-70 transition">Experiences</a>
-                <a href="#" class="hover:opacity-70 transition">Destinations</a>
-                <a href="#" class="hover:opacity-70 transition">About</a>
-                <a href="#" class="hover:opacity-70 transition border-b border-white pb-1">Contact</a>
+                <a href="#services" class="hover:opacity-70 transition">Experiences</a>
+                <a href="#destinations" class="hover:opacity-70 transition">Destinations</a>
+                <a href="#about" class="hover:opacity-70 transition">About</a>
+                <a href="#contact" class="hover:opacity-70 transition border-b border-white pb-1">Contact</a>
             </div>
         </nav>
 
@@ -35,7 +44,7 @@
         </div>
     </header>
 
-    <section class="py-24 px-8 max-w-7xl mx-auto text-center">
+    <section id="services" class="py-24 px-8 max-w-7xl mx-auto text-center">
         <span class="uppercase tracking-widest text-xs opacity-60 mb-4 block">Our Services</span>
         <h2 class="text-4xl md:text-5xl mb-16 italic">Tailored <span class="font-normal">Experiences</span></h2>
         
@@ -59,18 +68,17 @@
                     <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                 </div>
                 <h3 class="text-2xl mb-2 italic">MICE Solutions</h3>
-                <p class="text-sm opacity-70 leading-relaxed">Expertly managed meetings, incentives, conferences, and exhibitions tailored to your corporate goals.</p>
+                <p class="text-sm opacity-70 leading-relaxed">Expertly managed meetings, incentives, and exhibitions tailored to your corporate goals.</p>
             </div>
         </div>
     </section>
 
-    <section class="bg-cream py-24 px-8">
+    <section id="about" class="bg-cream py-24 px-8">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div>
                 <span class="uppercase tracking-widest text-xs opacity-60 mb-4 block">Our Commitment</span>
                 <h2 class="text-4xl md:text-5xl mb-8 italic leading-tight">Where Vision Meets Excellence</h2>
                 <p class="text-sm leading-relaxed opacity-80 mb-12">We believe that every journey should be as unique as the person taking it. Our global network and local expertise ensure that every detail is perfectly executed.</p>
-                
                 <div class="grid grid-cols-2 gap-8">
                     <div>
                         <h4 class="font-bold text-sm mb-2 italic">Global Reach</h4>
@@ -88,7 +96,7 @@
         </div>
     </section>
 
-    <section class="py-24 px-8 max-w-7xl mx-auto">
+    <section id="destinations" class="py-24 px-8 max-w-7xl mx-auto">
         <div class="flex justify-between items-end mb-12">
             <h2 class="text-4xl italic">Inspiring Locations</h2>
             <p class="text-xs max-w-xs opacity-60">Explore our curated selection of destinations that promise unforgettable memories.</p>
@@ -118,32 +126,48 @@
     </section>
 
     <section class="bg-dark-brown text-white py-24 text-center px-8">
-        <div class="max-w-3xl mx-auto">
-            <span class="text-4xl mb-8 block opacity-50">"</span>
-            <p class="text-2xl md:text-3xl italic mb-8 font-light leading-relaxed">Tabi Collective transformed our annual retreat into an extraordinary experience. Every detail was impeccable, and our team left more connected than ever.</p>
-            <div class="text-sm tracking-widest uppercase opacity-70 italic">— Sarah Chen, Operations Director</div>
+        <div class="max-w-3xl mx-auto min-h-[300px] flex flex-col justify-center">
+            <span class="text-4xl mb-4 block opacity-50">"</span>
+            
+            <div id="testimonial-container">
+                <div class="testimonial-slide active">
+                    <p class="text-2xl md:text-3xl italic mb-8 font-light leading-relaxed">Tabi Collective transformed our annual retreat into an extraordinary experience. Every detail was impeccable.</p>
+                    <div class="text-sm tracking-widest uppercase opacity-70 italic">— Sarah Chen, Operations Director</div>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="text-2xl md:text-3xl italic mb-8 font-light leading-relaxed">The most seamless international conference we have ever hosted. Their local expertise is unmatched.</p>
+                    <div class="text-sm tracking-widest uppercase opacity-70 italic">— James Miller, CEO of TechGlobal</div>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="text-2xl md:text-3xl italic mb-8 font-light leading-relaxed">Truly bespoke service. They understood our brand vision and delivered a trip that inspired our entire team.</p>
+                    <div class="text-sm tracking-widest uppercase opacity-70 italic">— Elena Rodriguez, Creative Head</div>
+                </div>
+            </div>
+
+            <div class="flex justify-center space-x-2 mt-12">
+                <div class="h-1 w-8 bg-white/20 rounded-full overflow-hidden"><div id="progress-bar" class="h-full bg-white w-0"></div></div>
+            </div>
         </div>
     </section>
 
-    <section class="bg-cream py-24 px-8">
+    <section id="contact" class="bg-cream py-24 px-8">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
             <div>
                 <h2 class="text-4xl italic mb-8">Let's Create <span class="font-normal">Together</span></h2>
                 <p class="opacity-70 mb-12">Every extraordinary journey begins with a conversation. Share your vision with us, and let's make it a reality.</p>
                 <div class="space-y-4 text-sm">
-                    <p><strong>Email:</strong> hello@tabicollective.com</p>
-                    <p><strong>Phone:</strong> +1 (555) 0123 4567</p>
-                    <p><strong>Office:</strong> 123 Travel Lane, Suite 100<br>London, UK W1K 4AB</p>
+                    <p><strong>Email:</strong> marketing@tabicollective.com.sg</p>
+                    <p><strong>Office:</strong> 123 Travel Lane, Suite 100, London, UK</p>
                 </div>
             </div>
-            <form class="space-y-6">
+            <form action="mailto:marketing@tabicollective.com.sg" method="POST" enctype="text/plain" class="space-y-6">
                 <div class="grid grid-cols-2 gap-4">
-                    <input type="text" placeholder="First Name" class="bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown">
-                    <input type="text" placeholder="Last Name" class="bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown">
+                    <input type="text" name="FirstName" placeholder="First Name" required class="bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown">
+                    <input type="text" name="LastName" placeholder="Last Name" required class="bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown">
                 </div>
-                <input type="email" placeholder="Email Address" class="w-full bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown">
-                <textarea rows="4" placeholder="Your Message" class="w-full bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown"></textarea>
-                <button class="bg-dark-brown text-white px-10 py-4 text-xs uppercase tracking-widest hover:opacity-90 transition">Send Inquiry</button>
+                <input type="email" name="Email" placeholder="Email Address" required class="w-full bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown">
+                <textarea name="Message" rows="4" placeholder="Your Message" required class="w-full bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown"></textarea>
+                <button type="submit" class="bg-dark-brown text-white px-10 py-4 text-xs uppercase tracking-widest hover:opacity-90 transition">Send Inquiry</button>
             </form>
         </div>
     </section>
@@ -153,12 +177,29 @@
             <div class="mb-4 md:mb-0">© 2025 Tabi Collective. All Rights Reserved.</div>
             <div class="flex space-x-8 uppercase tracking-widest">
                 <a href="#">Privacy</a>
-                <a href="#">Terms</a>
                 <a href="#">Instagram</a>
                 <a href="#">LinkedIn</a>
             </div>
         </div>
     </footer>
 
+    <script>
+        // Testimonial Carousel Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto-rotate every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
 </body>
 </html>
