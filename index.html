@@ -177,15 +177,28 @@
                     <p><strong>Office:</strong> 60 Paya Lebar Road, #06-28 Paya Lebar Square, Singapore 409051</p>
                 </div>
             </div>
-            <form action="mailto:marketing@tabicollective.com.sg" method="POST" enctype="text/plain" class="space-y-6">
-                <div class="grid grid-cols-2 gap-4">
-                    <input type="text" name="FirstName" placeholder="First Name" required class="bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown transition">
-                    <input type="text" name="LastName" placeholder="Last Name" required class="bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown transition">
-                </div>
-                <input type="email" name="Email" placeholder="Email Address" required class="w-full bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown transition">
-                <textarea name="Message" rows="4" placeholder="Your Message" required class="w-full bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown transition"></textarea>
-                <button type="submit" class="bg-dark-brown text-white px-10 py-4 text-xs uppercase tracking-widest hover:bg-opacity-90 transition shadow-lg">Send Inquiry</button>
-            </form>
+          <form action="https://formspree.io/f/meejwodv" method="POST" class="space-y-6">
+    <div class="grid grid-cols-2 gap-4">
+        <input type="text" name="FirstName" placeholder="First Name" required class="bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown transition">
+        <input type="text" name="LastName" placeholder="Last Name" required class="bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown transition">
+    </div>
+    <input type="email" name="_replyto" placeholder="Email Address" required class="w-full bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown transition">
+    
+    <textarea name="Message" rows="4" placeholder="Your Message" required class="w-full bg-transparent border-b border-dark-brown/20 py-3 px-1 text-sm focus:outline-none focus:border-dark-brown transition"></textarea>
+
+    <div class="flex items-start space-x-3">
+        <input type="checkbox" id="consent" name="Consent" required class="mt-1 accent-dark-brown">
+        <label for="consent" class="text-[10px] leading-tight opacity-60">
+            I consent to Tabi Collective collecting and using my personal data for the purpose of this inquiry in accordance with the <a href="privacy.html" class="underline">Privacy Policy</a>.
+        </label>
+    </div>
+
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button type="submit" class="bg-dark-brown text-white px-10 py-4 text-xs uppercase tracking-widest hover:bg-opacity-90 transition shadow-lg">
+        Send Inquiry
+    </button>
+</form>
         </div>
     </section>
 
