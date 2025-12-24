@@ -18,6 +18,15 @@
         .testimonial-slide { display: none; }
         .testimonial-slide.active { display: block; animation: fadeIn 0.8s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
     </style>
 </head>
 <body class="text-dark-brown antialiased">
@@ -27,13 +36,27 @@
             <img src="https://chiajiazhen-ui.github.io/tabicollective/tabicollective-logo.png" alt="Logo" class="h-8 w-auto">
             <div class="text-lg font-bold tracking-widest uppercase text-dark-brown">Tabi Collective</div>
         </div>
+
         <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest text-dark-brown font-medium">
             <a href="#services" class="hover:opacity-50 transition">Experiences</a>
             <a href="#destinations" class="hover:opacity-50 transition">Destinations</a>
             <a href="#about" class="hover:opacity-50 transition">About</a>
             <a href="#contact" class="hover:opacity-50 transition border-b border-dark-brown pb-1">Contact</a>
         </div>
+
+        <button id="menu-btn" class="md:hidden flex flex-col space-y-1.5 focus:outline-none z-50">
+            <span class="w-6 h-0.5 bg-dark-brown"></span>
+            <span class="w-6 h-0.5 bg-dark-brown"></span>
+            <span class="w-6 h-0.5 bg-dark-brown"></span>
+        </button>
     </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-cream z-40 flex flex-col items-center justify-center space-y-8 text-xl uppercase tracking-[0.3em] md:hidden">
+        <a href="#services" class="mobile-link">Experiences</a>
+        <a href="#destinations" class="mobile-link">Destinations</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
 
     <header class="relative h-[calc(100vh-80px)] flex items-center justify-center text-white overflow-hidden">
         <img src="https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&q=80&w=2000" alt="Resort" class="absolute inset-0 w-full h-full object-cover brightness-75">
@@ -66,7 +89,7 @@
                 <div class="overflow-hidden mb-6 aspect-[4/5]">
                     <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                 </div>
-                <h3 class="text-2xl mb-2 italic">MICE Solutions</h3>
+                <h3 class="text-2xl mb-2 italic">M.I.C.E. Solutions</h3>
                 <p class="text-sm opacity-70 leading-relaxed">Expertly managed meetings, incentives, and exhibitions tailored to your corporate goals.</p>
             </div>
         </div>
@@ -107,9 +130,9 @@
                 <span class="absolute bottom-6 left-6 text-white text-sm tracking-widest uppercase">Bali, Indonesia</span>
             </div>
             <div class="relative h-96 group overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1506929199175-60933ee8b649?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                <img src="https://images.unsplash.com/photo-1691222825905-81b1f5b991d8?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
-                <span class="absolute bottom-6 left-6 text-white text-sm tracking-widest uppercase">Santorini, Greece</span>
+                <span class="absolute bottom-6 left-6 text-white text-sm tracking-widest uppercase">Khao Lak, Thailand</span>
             </div>
             <div class="relative h-96 group overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
@@ -150,9 +173,8 @@
                 <h2 class="text-4xl italic mb-8 text-dark-brown">Let's Create <span class="font-normal">Together</span></h2>
                 <p class="opacity-70 mb-12 text-sm leading-relaxed">Every extraordinary journey begins with a conversation. Share your vision with us, and let's make it a reality.</p>
                 <div class="space-y-4 text-sm">
-                    <p><strong>Email:</strong> marketing@tabicollective.com.sg</p>
-                    <p><strong>Office:</strong>60 Paya Lebar Road<br>#06-28 Paya Lebar Square<br>Singapore 409051
-</p>
+                    <p><strong>Email:</strong> <a href="mailto: marketing@tabicollective.com.sg">marketing@tabicollective.com.sg</a></p>
+                    <p><strong>Office:</strong>60 Paya Lebar Road, #06-28 Paya Lebar Square, Singapore 409051</p>
                 </div>
             </div>
             <form action="mailto:marketing@tabicollective.com.sg" method="POST" enctype="text/plain" class="space-y-6">
@@ -172,13 +194,30 @@
             <div class="mb-4 md:mb-0">© 2025 Tabi Collective. All Rights Reserved.</div>
             <div class="flex space-x-8">
                 <a href="#" class="hover:text-white transition">Privacy</a>
-                <a href="https://www.instagram.com/tabicollective/" class="hover:text-white transition">Instagram</a>
+                <a href="https://www.instagram.com/tabicollective/" target=_blank class="hover:text-white transition">Instagram</a>
                 <a href="#" class="hover:text-white transition">LinkedIn</a>
             </div>
         </div>
     </footer>
 
     <script>
+        // Hamburger Menu Logic
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+            btn.classList.toggle('open');
+        });
+
+        // Close menu when a link is clicked
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('open');
+            });
+        });
+
         // Testimonial Carousel Logic
         let currentSlide = 0;
         const slides = document.querySelectorAll('.testimonial-slide');
@@ -193,7 +232,6 @@
             showSlide(currentSlide);
         }
 
-        // Auto-rotate every 5 seconds
         setInterval(nextSlide, 5000);
     </script>
 </body>
